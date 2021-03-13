@@ -17,16 +17,57 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
 
+private val Kulim = FontFamily(
+    Font(R.font.kulim_park_light, FontWeight.Light),
+    Font(R.font.kulim_park_regular)
+)
+private val Lato = FontFamily(
+    Font(R.font.lato),
+    Font(R.font.lato_bold, FontWeight.Bold)
+)
 // Set of Material typography styles to start with
 val typography = Typography(
+    h1 = TextStyle(
+        fontFamily = Kulim,
+        fontWeight = FontWeight.Light,
+        fontSize = 28.sp,
+        letterSpacing = 1.15.sp
+    ),
+    h2 = TextStyle(
+        fontFamily = Kulim,
+        fontSize = 15.sp,
+        letterSpacing = 1.15.sp,
+//        fontFeatureSettings ="allcaps"
+    ),
+    h3 = TextStyle(
+        fontFamily = Lato,
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp,
+        letterSpacing = 0.sp,
+    ),
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
+        fontFamily = Lato,
+        fontSize = 14.sp,
+        letterSpacing = 0.sp
+    ),
+    button = TextStyle(
+        fontFamily = Lato,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+        letterSpacing = 1.15.sp,
+//        fontFeatureSettings = "font-variant-caps: all-small-caps",
+    ),
+    caption = TextStyle(
+        fontFamily = Kulim,
+        fontSize = 12.sp,
+        letterSpacing = 1.15.sp,
+//        fontFeatureSettings = "font-variant-caps: all-small-caps"
     )
         /* Other default text styles to override
     button = TextStyle(
